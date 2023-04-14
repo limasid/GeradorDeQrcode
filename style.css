@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 84px;
+}
+
+div{
+    margin:10px;
+}
+
+body{
+    justify-content: center;
+    align-items: center;
+    width: 875px;
+    height: 400px;
+}
+
+
+
+#qr-codes-wrapper {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+
+  .card-qr-code {
+    border: 2px solid black;
+    padding: 10px 5px;
+  }
+
+  p{
+    font-size: 16px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+
+
+  a{
+    text-decoration: none;
+    
+  }

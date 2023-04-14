@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <script type="text/javascript" src="js/index.js" defer></script>
+    
+    <link rel="stylesheet" href="style.css" />
+    
+    <title>Gerador de QRCODE</title>
+</head>
+<body>
+    <main id="main">
+        <div id="controller">
+           <input type="text" id="serial" maxlength="3" placeholder="Digite Serial" />
+           <input type="number" id="copies" placeholder="Digite o numero de copias" />
+           <input type="number" id="lest" placeholder="Digite o Inicializador" />
+           <input type="number" id="cards" placeholder="Digite o numero de QR Codes" />
+        <button id="generate-button">Gerar</button>
+
+        <button id="generate-pdf" class="" aria-placeholder=""> Gerar Print </button>
+    </div>
+    <div id="qr-codes-wrapper"></div>
+ 
+</main>
+  </body>
+</html>
