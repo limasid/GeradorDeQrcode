@@ -8,28 +8,32 @@ img{
     width: 84px;
 }
 
-div{
-    margin:10px;
-}
+
 
 body{
     justify-content: center;
     align-items: center;
-    width: 875px;
-    height: 400px;
+    
 }
 
 
 
 #qr-codes-wrapper {
     display: flex;
-    gap: 5px;
     flex-wrap: wrap;
+    gap: 0.6rem;
+    width: 54rem;
   }
 
   .card-qr-code {
     border: 2px solid black;
     padding: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+
   }
 
   p{
