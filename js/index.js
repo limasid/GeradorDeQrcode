@@ -1,7 +1,7 @@
 // Constants
 const minimumCopies = 1
 const minimumCards = 1
-const minimumLest = 1
+const minimumLest = 0
 const initSerial = 'COD'
 
 const qrCodeConfig = {
@@ -26,7 +26,7 @@ function generate() {
   for (let card = 1; card <= cards; card++) {
     for (let copy = 1; copy <= copies; copy++) {
       
-      createQRCode((lest+0), copy, serial)
+      createQRCode((lest+card), copy, serial)
     }
   }
 }
