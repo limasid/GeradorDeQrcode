@@ -10,41 +10,197 @@ img{
 
 
 
-body{
-    justify-content: center;
-    align-items: center;
-    
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding:2rem;
+  gap: 4rem;
+
+}
+
+#qr-codes-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  max-width: 45rem;
+
+
+}
+
+.card-qr-code {
+  border: 2px solid black;
+  padding: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+}
+
+p{
+  font-size: 16px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
 }
 
 
+a{
+  text-decoration: none;
+  
+}
+.controller{
+  min-width: 250px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.controller-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.input {
 
-#qr-codes-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem;
-    width: 54rem;
+  min-width: 250px;
+  max-width: 300px;
+  min-height: 40px;
+  padding: 10px 0.5rem;
+  font-family: 'Courier New', Courier, monospace;
+  outline: none;
+  background: #e8e8e8;
+  box-shadow: 5px 5px 17px #c8c8c8,
+              -5px -5px 17px #ffffff;
+  border: none;
+  border-radius: 10px;
+  transition: all .5s;
+  display: block;
+  text-align: center;
+  margin: auto;
+}
+
+.input:focus {
+  background: #e8e8e8;
+  box-shadow: inset 5px 5px 17px #c8c8c8,
+            inset -5px -5px 17px #ffffff;
+}
+
+/* btn init print*/
+
+.download-button {
+  width: 7rem;
+  position: relative;
+  border-width: 0;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 4px;
+  z-index: 1;
+ }
+ .docs{
+  height: 60px;
+ }
+ .download-button .docs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: 4px;
+  z-index: 1;
+  background-color: #242a35;
+  border: solid 1px #e8e8e82d;
+  transition: all .5s cubic-bezier(0.77, 0, 0.175, 1);
+ }
+ 
+ .download-button:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+ }
+ 
+ .download {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 85%;
+  margin: 0 auto;
+  padding-top: 0.9rem ;
+  z-index: -1;
+  border-radius: 4px;
+  transform: translateY(0%);
+  background-color: #01e056;
+  border: solid 1px #01e0572d;
+  transition: all .5s cubic-bezier(0.77, 0, 0.175, 1);
+ }
+ 
+ .download-button:hover .download {
+  transform: translateY(70%)
+ }
+ 
+ .download svg polyline,.download svg line {
+  animation: docs 0.5s infinite;
+ }
+ 
+ @keyframes docs {
+  0% {
+   transform: translateY(0%);
+  }
+ 
+  50% {
+   transform: translateY(-15%);
+  }
+ 
+  100% {
+   transform: translateY(0%);
+  }
+ }
+
+ /* init btn generator */
+
+ .btn {
+  background: transparent;
+  color: #fff;
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  padding: 0.7rem;
+  perspective: 30rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.308);
+}
+
+.btn::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  background: linear-gradient(320deg, rgba(0, 140, 255, 0.678), rgba(128, 0, 128, 0.308));
+  z-index: 1;
+  transition: background 3s;
+}
+
+.btn:hover::before {
+  animation: rotate 1s;
+  transition: all .5s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(180deg);
   }
 
-  .card-qr-code {
-    border: 2px solid black;
-    padding: 10px 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.3rem;
-
+  100% {
+    transform: rotateY(360deg);
   }
-
-  p{
-    font-size: 16px;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-  }
-
-
-  a{
-    text-decoration: none;
-    
-  }
+}
